@@ -17,10 +17,10 @@
     return YES;
 }
 
-id addNewResolveMethod(id self,SEL sel)
+void/*id*/ addNewResolveMethod(id self,SEL sel)
 {
     NSLog(@"resolve: %@,%@",NSStringFromClass([self class]),NSStringFromSelector(sel));
-    return 0;
+    return ;
 }
 
 @end
