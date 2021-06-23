@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074F94162682D65400716173 /* NSObjectStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F94152682D65400716173 /* NSObjectStub.m */; };
+		074F94202682D8BE00716173 /* RumtimeHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F941F2682D8BE00716173 /* RumtimeHook.m */; };
+		074F942B2682E0EF00716173 /* NSObject+Shield.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F942A2682E0EF00716173 /* NSObject+Shield.m */; };
 		079FB91E2682D38500167732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FB91D2682D38500167732 /* AppDelegate.m */; };
 		079FB9212682D38500167732 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FB9202682D38500167732 /* SceneDelegate.m */; };
 		079FB9242682D38500167732 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FB9232682D38500167732 /* ViewController.m */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074F94142682D65400716173 /* NSObjectStub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObjectStub.h; sourceTree = "<group>"; };
+		074F94152682D65400716173 /* NSObjectStub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectStub.m; sourceTree = "<group>"; };
+		074F941E2682D8BE00716173 /* RumtimeHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RumtimeHook.h; sourceTree = "<group>"; };
+		074F941F2682D8BE00716173 /* RumtimeHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RumtimeHook.m; sourceTree = "<group>"; };
+		074F94292682E0EF00716173 /* NSObject+Shield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Shield.h"; sourceTree = "<group>"; };
+		074F942A2682E0EF00716173 /* NSObject+Shield.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Shield.m"; sourceTree = "<group>"; };
 		079FB9192682D38500167732 /* ShieldDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShieldDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079FB91C2682D38500167732 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		079FB91D2682D38500167732 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,9 +90,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074F94112682D5AE00716173 /* ShieldSource */ = {
+			isa = PBXGroup;
+			children = (
+				074F941D2682D89F00716173 /* Utils */,
+				074F94132682D5EB00716173 /* UnrecognizerSEL */,
+			);
+			path = ShieldSource;
+			sourceTree = "<group>";
+		};
+		074F94132682D5EB00716173 /* UnrecognizerSEL */ = {
+			isa = PBXGroup;
+			children = (
+				074F94142682D65400716173 /* NSObjectStub.h */,
+				074F94152682D65400716173 /* NSObjectStub.m */,
+				074F94292682E0EF00716173 /* NSObject+Shield.h */,
+				074F942A2682E0EF00716173 /* NSObject+Shield.m */,
+			);
+			path = UnrecognizerSEL;
+			sourceTree = "<group>";
+		};
+		074F941D2682D89F00716173 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				074F941E2682D8BE00716173 /* RumtimeHook.h */,
+				074F941F2682D8BE00716173 /* RumtimeHook.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		079FB9102682D38500167732 = {
 			isa = PBXGroup;
 			children = (
+				074F94112682D5AE00716173 /* ShieldSource */,
 				079FB91B2682D38500167732 /* ShieldDemo */,
 				079FB9372682D38600167732 /* ShieldDemoTests */,
 				079FB9422682D38600167732 /* ShieldDemoUITests */,
@@ -268,7 +307,10 @@
 			files = (
 				079FB9242682D38500167732 /* ViewController.m in Sources */,
 				079FB91E2682D38500167732 /* AppDelegate.m in Sources */,
+				074F94162682D65400716173 /* NSObjectStub.m in Sources */,
+				074F942B2682E0EF00716173 /* NSObject+Shield.m in Sources */,
 				079FB92F2682D38600167732 /* main.m in Sources */,
+				074F94202682D8BE00716173 /* RumtimeHook.m in Sources */,
 				079FB9212682D38500167732 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
