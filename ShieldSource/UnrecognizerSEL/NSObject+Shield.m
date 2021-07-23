@@ -7,7 +7,7 @@
 
 #import "NSObject+Shield.h"
 #import "NSObjectStub.h"
-#import "RumtimeHook.h"
+#import "RuntimeHook.h"
 #import <objc/runtime.h>
 
 @implementation NSObject (Shield)
@@ -18,7 +18,7 @@
 //    static dispatch_once_t once;
 //    dispatch_once(&once, ^{
 //        obj = [[NSObject alloc]init];
-//        RumtimeHook runtimeHook:(NSString*)origionClass originSEL:(NSString*)originSel newClass:(NSString*)newClass newSEL:(NSString*)newSel
+//        RuntimeHook runtimeHook:(NSString*)origionClass originSEL:(NSString*)originSel newClass:(NSString*)newClass newSEL:(NSString*)newSel
 //    });
 //
 //    return obj;
@@ -29,7 +29,7 @@
     static dispatch_once_t token;
     
     dispatch_once(&token, ^{
-        [RumtimeHook runtimeHook:[NSObject class] originSEL:NSStringFromSelector(@selector(forwardingTargetForSelector:)) newClass:[NSObject class] newSEL:NSStringFromSelector(@selector(stub_forwardingTargetForSelector:))];
+        [RuntimeHook runtimeHook:[NSObject class] originSEL:NSStringFromSelector(@selector(forwardingTargetForSelector:)) newClass:[NSObject class] newSEL:NSStringFromSelector(@selector(stub_forwardingTargetForSelector:))];
     });
     
     

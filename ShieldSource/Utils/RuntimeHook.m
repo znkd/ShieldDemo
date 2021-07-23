@@ -1,14 +1,14 @@
 //
-//  RumtimeHook.m
+//  RuntimeHook.m
 //  ShieldDemo
 //
 //  Created by eric on 2021/6/23.
 //
 
-#import "RumtimeHook.h"
+#import "RuntimeHook.h"
 #import <objc/runtime.h>
 
-@implementation RumtimeHook
+@implementation RuntimeHook
 +(void)runtimeHook:(Class)origionClass originSEL:(NSString*)originSelName newClass:(Class)newClass newSEL:(NSString*)newSelName
 {
 

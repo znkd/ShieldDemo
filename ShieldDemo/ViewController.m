@@ -7,10 +7,20 @@
 
 #import "ViewController.h"
 #import "NSObject+Shield.h"
-#import "RumtimeHook.h"
+#import "RuntimeHook.h"
+
+#import "ZombieObjectManager.h"
+@interface Myobj : NSObject
+@end
+
+@implementation Myobj
+
+
+
+@end
 
 @interface ViewController ()
-
+@property(nonatomic, assign) NSObject* innerObj;
 @end
 
 @implementation ViewController
@@ -27,11 +37,21 @@
 //    [self performSelector:@selector(fn)];
     
     
-//    [RumtimeHook runtimeHook:[self class] originSEL:NSStringFromSelector(@selector(test1)) newClass:[self class] newSEL:NSStringFromSelector(@selector(test2))];
+//    [RuntimeHook runtimeHook:[self class] originSEL:NSStringFromSelector(@selector(test1)) newClass:[self class] newSEL:NSStringFromSelector(@selector(test2))];
 //
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1), dispatch_get_main_queue(), ^{
 //        [self test1];
 //    });
+    
+    ZombieObjectManager* mgr = [ZombieObjectManager sharedInstance];
+    mgr.zombieClassArray = @[@"Myobj"];
+    [mgr startZombieObjectMonitor];
+    
+    _innerObj = [Myobj new];
+    
+    int i = 0;
+    
+    [_innerObj performSelector:@selector(abc:)];
     
 }
 

@@ -1,5 +1,5 @@
 //
-//  RumtimeHook.h
+//  RuntimeHook.h
 //  ShieldDemo
 //
 //  Created by eric on 2021/6/23.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RumtimeHook : NSObject
+@interface RuntimeHook : NSObject
 
 +(void)runtimeHook:(Class)origionClass originSEL:(NSString*)originSel newClass:(Class)newClass newSEL:(NSString*)newSel;
 
