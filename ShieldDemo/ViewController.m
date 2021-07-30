@@ -46,7 +46,7 @@
     ZombieObjectManager* mgr = [ZombieObjectManager sharedInstance];
     mgr.zombieClassArray = @[@"Myobj"];
     [mgr startZombieObjectMonitor];
-    
+    //测试
     _innerObj = [Myobj new];
     
     int i = 0;
