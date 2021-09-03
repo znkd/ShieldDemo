@@ -10,6 +10,8 @@
 		074F94162682D65400716173 /* NSObjectStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F94152682D65400716173 /* NSObjectStub.m */; };
 		074F94202682D8BE00716173 /* RuntimeHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F941F2682D8BE00716173 /* RuntimeHook.m */; };
 		074F942B2682E0EF00716173 /* NSObject+Shield.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F942A2682E0EF00716173 /* NSObject+Shield.m */; };
+		0756642626E217450023363A /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756642526E217450023363A /* MainTabBarViewController.m */; };
+		0756642C26E217BE0023363A /* CatagoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756642B26E217BE0023363A /* CatagoryTableViewController.m */; };
 		076ACED626AAC26D000F3101 /* NSObject+ZombieObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076ACED526AAC26D000F3101 /* NSObject+ZombieObject.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		076ACEDC26AAC2C8000F3101 /* ZombieObjectStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 076ACEDB26AAC2C8000F3101 /* ZombieObjectStub.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		076ACEE226AAC2FA000F3101 /* ZombieObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076ACEE126AAC2FA000F3101 /* ZombieObjectManager.m */; };
@@ -48,6 +50,10 @@
 		074F941F2682D8BE00716173 /* RuntimeHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeHook.m; sourceTree = "<group>"; };
 		074F94292682E0EF00716173 /* NSObject+Shield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Shield.h"; sourceTree = "<group>"; };
 		074F942A2682E0EF00716173 /* NSObject+Shield.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Shield.m"; sourceTree = "<group>"; };
+		0756642426E217450023363A /* MainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		0756642526E217450023363A /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		0756642A26E217BE0023363A /* CatagoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatagoryTableViewController.h; sourceTree = "<group>"; };
+		0756642B26E217BE0023363A /* CatagoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatagoryTableViewController.m; sourceTree = "<group>"; };
 		076ACED426AAC26D000F3101 /* NSObject+ZombieObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZombieObject.h"; sourceTree = "<group>"; };
 		076ACED526AAC26D000F3101 /* NSObject+ZombieObject.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+ZombieObject.mm"; sourceTree = "<group>"; };
 		076ACEDA26AAC2C8000F3101 /* ZombieObjectStub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZombieObjectStub.h; sourceTree = "<group>"; };
@@ -177,6 +183,10 @@
 				079FB92A2682D38600167732 /* LaunchScreen.storyboard */,
 				079FB92D2682D38600167732 /* Info.plist */,
 				079FB92E2682D38600167732 /* main.m */,
+				0756642426E217450023363A /* MainTabBarViewController.h */,
+				0756642526E217450023363A /* MainTabBarViewController.m */,
+				0756642A26E217BE0023363A /* CatagoryTableViewController.h */,
+				0756642B26E217BE0023363A /* CatagoryTableViewController.m */,
 			);
 			path = ShieldDemo;
 			sourceTree = "<group>";
@@ -329,6 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				079FB9242682D38500167732 /* ViewController.m in Sources */,
+				0756642C26E217BE0023363A /* CatagoryTableViewController.m in Sources */,
+				0756642626E217450023363A /* MainTabBarViewController.m in Sources */,
 				079FB91E2682D38500167732 /* AppDelegate.m in Sources */,
 				076ACEE226AAC2FA000F3101 /* ZombieObjectManager.m in Sources */,
 				076ACEDC26AAC2C8000F3101 /* ZombieObjectStub.m in Sources */,
@@ -512,6 +524,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78L663PHFJ;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = ShieldDemo/Info.plist;
@@ -533,6 +546,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78L663PHFJ;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				INFOPLIST_FILE = ShieldDemo/Info.plist;

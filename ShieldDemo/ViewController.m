@@ -6,6 +6,9 @@
 //
 
 #import "ViewController.h"
+
+#import "MainTabBarViewController.h"
+
 #import "NSObject+Shield.h"
 #import "RuntimeHook.h"
 
@@ -20,6 +23,7 @@
 @end
 
 @interface ViewController ()
+@property(nonatomic, strong) MainTabBarViewController* mainVC;
 @property(nonatomic, assign) NSObject* innerObj;
 @end
 
@@ -28,6 +32,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.mainVC = [[MainTabBarViewController alloc]initWithNibName:nil bundle:nil];
+    self.mainVC.demoStylesArr = @[@"Demo:unRecogizerSelector",@"Demo:ZombieObjectUsed"];
+    
+    [self.view addSubview:self.mainVC.view];
+    [self addChildViewController:self.mainVC];
+    
+#if 0
     [NSObject initializeWithSwizzling];
     
     id a = @"abc";
@@ -52,6 +64,8 @@
     int i = 0;
     
     [_innerObj performSelector:@selector(abc:)];
+    
+#endif
     
 }
 
