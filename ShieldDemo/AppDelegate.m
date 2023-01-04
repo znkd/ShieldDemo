@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import <objc/runtime.h>
 
 @interface AppDelegate ()
 
@@ -16,6 +17,50 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    int numClasses;
+    Class * classes = NULL;
+        
+    classes = NULL;
+    numClasses = objc_getClassList(NULL, 0);
+        
+    if (numClasses > 0 )
+    {
+       classes = (Class*)malloc(sizeof(Class) * numClasses);
+       numClasses = objc_getClassList(classes, numClasses);
+       
+       for(int idx = 0; idx < numClasses; ++idx){
+           Class cls = *(classes + idx);
+           
+           const char *className = object_getClassName(cls);
+           Class metaCls = objc_getMetaClass(className);
+           
+           BOOL hasLoad = NO;
+           unsigned int methodCount = 0;
+           Method *methods = class_copyMethodList(metaCls, & methodCount);
+           if(methods){
+               for(int j = 0; j < methodCount; ++j){
+                   Method method = *(methods + j);
+                   SEL name = method_getName(method);
+                   NSString *methodName = NSStringFromSelector(name);
+                   if([methodName isEqualToString:@"load"]){
+                       hasLoad = YES;
+                       break;
+                   }
+               }
+           }
+           
+           if(hasLoad){
+               NSLog(@"has load : %@", NSStringFromClass(cls));
+           }else{
+    //                NSLog(@"not has load : %@", NSStringFromClass(cls));
+           }
+       }
+       
+       free(classes);
+    }
+    
+    
     return YES;
 }
 

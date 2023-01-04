@@ -7,6 +7,7 @@
 
 #import "MainTabBarViewController.h"
 #import "CatagoryTableViewController.h"
+#import "MainTableViewCell.h"
 
 @interface MainTabBarViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -18,10 +19,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     CatagoryTableViewController* ctvvc = [[CatagoryTableViewController alloc]initWithNibName:nil bundle:nil];
+    //ctvvc.tableView.rowHeight;// = auto
     ctvvc.tableView.delegate = self;
     ctvvc.tableView.dataSource = self;
+    
+    ctvvc.tableView.estimatedRowHeight = 10.0f;
+    ctvvc.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     ctvvc.title = @"DemoStyles";
     UIViewController* vc2 = [[UIViewController alloc]initWithNibName:nil bundle:nil];
+    
+//    asl_msg_t* merged_msg;
+    
     vc2.title = @"others";
     UIViewController* vc3 = [[UIViewController alloc]initWithNibName:nil bundle:nil];
     vc3.title = @"My";
@@ -49,18 +58,17 @@
     }
 }
 
+- (void)btnclick
+{
+    NSLog(@"cell btn clicked");
+}
+
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     NSString* reuseIdentifier = @"DemoStyleCell";
     
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
-        
-        NSInteger index = indexPath.row;
-        UILabel* cellLabel = [[UILabel alloc]initWithFrame:(CGRect)cell.contentView.bounds];
-        [cellLabel setText:self.demoStylesArr[index]];
-        [cell.contentView addSubview:cellLabel];
-        cell.selectionStyle = UITableViewCellSelectionStyleBlue;//UITableViewCellSelectionStyleNone;
+        cell = [[MainTableViewCell alloc]initWithMainCellStyle:1 reuseIdentifier:reuseIdentifier indexPath:indexPath];
     }
     
     return cell;

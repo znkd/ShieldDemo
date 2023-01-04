@@ -12,9 +12,11 @@
 		074F942B2682E0EF00716173 /* NSObject+Shield.m in Sources */ = {isa = PBXBuildFile; fileRef = 074F942A2682E0EF00716173 /* NSObject+Shield.m */; };
 		0756642626E217450023363A /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756642526E217450023363A /* MainTabBarViewController.m */; };
 		0756642C26E217BE0023363A /* CatagoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756642B26E217BE0023363A /* CatagoryTableViewController.m */; };
+		0756643526E243C90023363A /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0756643426E243C90023363A /* AvatarView.m */; };
 		076ACED626AAC26D000F3101 /* NSObject+ZombieObject.mm in Sources */ = {isa = PBXBuildFile; fileRef = 076ACED526AAC26D000F3101 /* NSObject+ZombieObject.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		076ACEDC26AAC2C8000F3101 /* ZombieObjectStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 076ACEDB26AAC2C8000F3101 /* ZombieObjectStub.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		076ACEE226AAC2FA000F3101 /* ZombieObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 076ACEE126AAC2FA000F3101 /* ZombieObjectManager.m */; };
+		0784462D27046246001D8CF2 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0784462C27046246001D8CF2 /* MainTableViewCell.m */; };
 		079FB91E2682D38500167732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FB91D2682D38500167732 /* AppDelegate.m */; };
 		079FB9212682D38500167732 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FB9202682D38500167732 /* SceneDelegate.m */; };
 		079FB9242682D38500167732 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079FB9232682D38500167732 /* ViewController.m */; };
@@ -54,12 +56,16 @@
 		0756642526E217450023363A /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		0756642A26E217BE0023363A /* CatagoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatagoryTableViewController.h; sourceTree = "<group>"; };
 		0756642B26E217BE0023363A /* CatagoryTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatagoryTableViewController.m; sourceTree = "<group>"; };
+		0756643326E243C90023363A /* AvatarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AvatarView.h; path = Views/AvatarView.h; sourceTree = "<group>"; };
+		0756643426E243C90023363A /* AvatarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AvatarView.m; path = Views/AvatarView.m; sourceTree = "<group>"; };
 		076ACED426AAC26D000F3101 /* NSObject+ZombieObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZombieObject.h"; sourceTree = "<group>"; };
 		076ACED526AAC26D000F3101 /* NSObject+ZombieObject.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSObject+ZombieObject.mm"; sourceTree = "<group>"; };
 		076ACEDA26AAC2C8000F3101 /* ZombieObjectStub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZombieObjectStub.h; sourceTree = "<group>"; };
 		076ACEDB26AAC2C8000F3101 /* ZombieObjectStub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZombieObjectStub.m; sourceTree = "<group>"; };
 		076ACEE026AAC2FA000F3101 /* ZombieObjectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZombieObjectManager.h; sourceTree = "<group>"; };
 		076ACEE126AAC2FA000F3101 /* ZombieObjectManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZombieObjectManager.m; sourceTree = "<group>"; };
+		0784462B27046246001D8CF2 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		0784462C27046246001D8CF2 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		079FB9192682D38500167732 /* ShieldDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShieldDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		079FB91C2682D38500167732 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		079FB91D2682D38500167732 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -187,6 +193,10 @@
 				0756642526E217450023363A /* MainTabBarViewController.m */,
 				0756642A26E217BE0023363A /* CatagoryTableViewController.h */,
 				0756642B26E217BE0023363A /* CatagoryTableViewController.m */,
+				0756643326E243C90023363A /* AvatarView.h */,
+				0756643426E243C90023363A /* AvatarView.m */,
+				0784462B27046246001D8CF2 /* MainTableViewCell.h */,
+				0784462C27046246001D8CF2 /* MainTableViewCell.m */,
 			);
 			path = ShieldDemo;
 			sourceTree = "<group>";
@@ -340,11 +350,13 @@
 			files = (
 				079FB9242682D38500167732 /* ViewController.m in Sources */,
 				0756642C26E217BE0023363A /* CatagoryTableViewController.m in Sources */,
+				0784462D27046246001D8CF2 /* MainTableViewCell.m in Sources */,
 				0756642626E217450023363A /* MainTabBarViewController.m in Sources */,
 				079FB91E2682D38500167732 /* AppDelegate.m in Sources */,
 				076ACEE226AAC2FA000F3101 /* ZombieObjectManager.m in Sources */,
 				076ACEDC26AAC2C8000F3101 /* ZombieObjectStub.m in Sources */,
 				076ACED626AAC26D000F3101 /* NSObject+ZombieObject.mm in Sources */,
+				0756643526E243C90023363A /* AvatarView.m in Sources */,
 				074F94162682D65400716173 /* NSObjectStub.m in Sources */,
 				074F942B2682E0EF00716173 /* NSObject+Shield.m in Sources */,
 				079FB92F2682D38600167732 /* main.m in Sources */,
