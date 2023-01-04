@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, copy) NSString* aaaafeatureChange;
 
+@property(nonatomic, copy) NSString* aaaafeatureChange2;
+
 @end
 
 NS_ASSUME_NONNULL_END
