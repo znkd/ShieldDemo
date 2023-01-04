@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 //  major branch  change
 
+// major branch change after feature change1
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (ZombieObject)
