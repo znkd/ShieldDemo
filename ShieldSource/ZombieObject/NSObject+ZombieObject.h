@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)danglinng_dealloc;
 
+@property(nonatomic, copy) NSString* aaaafeatureChange;
+
 @end
 
 NS_ASSUME_NONNULL_END
