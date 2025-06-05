@@ -154,6 +154,13 @@
 			path = ZombieObject;
 			sourceTree = "<group>";
 		};
+		077EF7242DEE8DB900167BD0 /* safeRW */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = safeRW;
+			sourceTree = "<group>";
+		};
 		079FB9102682D38500167732 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +185,7 @@
 		079FB91B2682D38500167732 /* ShieldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				077EF7242DEE8DB900167BD0 /* safeRW */,
 				079FB91C2682D38500167732 /* AppDelegate.h */,
 				079FB91D2682D38500167732 /* AppDelegate.m */,
 				079FB91F2682D38500167732 /* SceneDelegate.h */,

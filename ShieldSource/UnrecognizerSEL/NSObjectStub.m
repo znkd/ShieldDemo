@@ -12,6 +12,8 @@
 
 +(BOOL)resolveInstanceMethod:(SEL)sel
 {
+    //method m = class_getInstanceMethod([MyClass class], @selector(doSomethingWithObject:));
+    //const char* encodeString = method_getTypeEncoding(m)  => will output "v@:"
     class_addMethod([self class], sel, (IMP)addNewResolveMethod, "v@:@");
     
     return YES;
